@@ -5,16 +5,12 @@ provider "aws" {
 
 # Create an S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-unique-bucket-yaweh123"  # Use a unique bucket name
+  bucket = "my-unique-bucket-yaweh1234"  # Ensure this is globally unique
+
+  object_ownership = "BucketOwnerEnforced"  # Enforces ownership and removes ACL dependency
 
   tags = {
     Name        = "MyBucket"
     Environment = "Dev"
   }
-}
-
-# Set ACL for the bucket
-resource "aws_s3_bucket_acl" "my_bucket_acl" {
-  bucket = aws_s3_bucket.my_bucket.id
-  acl    = "private"
 }
