@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "jenkins_demo" {
-  ami           = "ami-0c55b159cbfafe1f0" # Replace with a valid AMI ID
+  ami           = "ami-03a725ae7d906005d" # Replace with a valid AMI ID
   instance_type = "t2.micro"
   
   key_name      = "hush"  # Using existing key pair
