@@ -5,7 +5,7 @@ provider "aws" {
 
 # Create an S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-unique-bucket-name-12345"  # Use a unique bucket name
+  bucket = "my-unique-bucket-yaweh123"  # Use a unique bucket name
 
   tags = {
     Name        = "MyBucket"
